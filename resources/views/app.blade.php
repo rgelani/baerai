@@ -7,6 +7,8 @@
 
     <title inertia>{{ config('app.name', 'Laravel') }}</title>
 
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2200498270451356" crossorigin="anonymous"></script>
+
     <!-- Fonts -->
     <link rel="icon" type="image/x-icon" href="{{ asset('images/favicon.ico') }}">
     <link rel="preconnect" href="https://fonts.bunny.net">
