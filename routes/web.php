@@ -46,12 +46,12 @@ Route::middleware('auth')->group(function () {
     Route::get('/generate-text', function () {
         return Inertia::render('Tools/GenerateText');
     })->name('generate-text');
-
-    // convert to image
-    Route::get('/text-to-image', function () {
-        return Inertia::render('Tools/TextToImage');
-    })->name('text-to-image');
-    Route::post('/text-to-image', [TextToImageController::class, 'generateImage'])->name('generate.image');
 });
+
+// convert to image
+Route::get('/text-to-image', function () {
+    return Inertia::render('Tools/TextToImage');
+})->name('text-to-image');
+Route::post('/text-to-image', [TextToImageController::class, 'generateImage'])->name('generate.image');
 
 require __DIR__ . '/auth.php';
