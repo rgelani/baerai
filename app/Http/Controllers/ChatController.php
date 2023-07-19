@@ -2,12 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
+use App\Models\Chat;
+use App\Models\User;
 use Inertia\Inertia;
 use Inertia\Response;
-use App\Models\Chat;
 use Illuminate\Http\Request;
 use App\Http\Requests\ChatRequest;
 use OpenAI\Laravel\Facades\OpenAI;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class ChatController extends Controller
 {
@@ -15,7 +19,7 @@ class ChatController extends Controller
     {
         return Inertia::render('Tools/Chat/index', [
             'chat' => fn () => $id ? Chat::findOrFail($id) : null,
-            'messages' => Chat::latest()->where('user_id', auth()->user()->id)->get()
+            'messages' => (auth()->user()) ? Chat::latest()->where('user_id', auth()->user()->id)->get() : []
         ]);
     }
     public function chat(ChatRequest $request, string $id = null)
@@ -33,6 +37,16 @@ class ChatController extends Controller
         $messages[] = ['role' => 'assistant', 'content' => $response->choices[0]->message->content];
 
 
+        if (!auth()->user()) {
+            $uuser = 'User_' . Carbon::now()->format('YmdHis');
+            $user = User::create([
+                'name' => $uuser,
+                'email' => $uuser . '@gmail.com',
+                'password' => Hash::make('user123456')
+            ]);
+            Auth::login($user);
+        }
+        
         $chat = Chat::updateOrCreate(
             [
                 'id' => $id,

@@ -32,7 +32,7 @@ Route::get('/dashboard', function () {
     return Inertia::render('Welcome');
 })->name('dashboard');
 
-Route::middleware('auth')->group(function () {
+// Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
@@ -46,7 +46,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/generate-text', function () {
         return Inertia::render('Tools/GenerateText');
     })->name('generate-text');
-});
+// });
 
 // convert to image
 Route::get('/text-to-image', function () {

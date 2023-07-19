@@ -33,7 +33,7 @@
     @inertiaHead
 </head>
 
-<body class="font-sans antialiased bg-slate-700" data-url={{ config('app.url') }}>
+<body class="font-sans antialiased bg-slate-700" data-url="{{ config('app.url') }}">
     @inertia
 </body>
 

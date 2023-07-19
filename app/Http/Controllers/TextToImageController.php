@@ -13,7 +13,7 @@ class TextToImageController extends Controller
     {
         $response = OpenAI::images()->create([
             'prompt' => $request->input('prompt'),
-            'n' => 5,
+            'n' => 2,
             "size" => $request->get('size'),
             "response_format" => "url"
         ]);

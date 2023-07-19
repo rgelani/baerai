@@ -119,42 +119,42 @@ const host = document.body.dataset.url;
                                                                                                                             <div
                                                                                                                                 class="h-16 w-16 flex items-center justify-center rounded-full m-auto"
                                                                                                                             >
-                                                                                                                            <img :src="`${host}/images/chat.gif`" />
-                                                                                                                            </div>
+                                                                                                                                                            <img :src="`${host}/images/chat.gif`" alt="Chat" width="50" height="50"/>
+                                                                                                                                                    </div>
 
-                                                                                                                            <div class="flex justify-between">
-                                                                                                                            <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Chat</h2>
+                                                                                                                                                    <div class="flex justify-between">
+                                                                                                                                                    <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Chat</h2>
                                                                 
-                                                                                                                            <svg
-                                                                                                                            xmlns="http://www.w3.org/2000/svg"
-                                                                                                                            fill="none"
-                                                                                                                            viewBox="0 0 24 24"
-                                                                                                                            stroke-width="1.5"
-                                                                                                                            class="self-center shrink-0 stroke-red-500 w-6 h-6 mx-6"
-                                                                                                                        >
-                                                                                                                            <path
-                                                                                                                                stroke-linecap="round"
-                                                                                                                                stroke-linejoin="round"
-                                                                                                                                d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
-                                                                                                                            />
-                                                                                                                        </svg>
-                                                                                                </div>
-                                                                                                                            <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                                                                                                                Feel free to ask any question to this chatbot! It will provide you with a response that is well-formatted and easy to read. This chatbot is known for its helpfulness, creativity, cleverness, and friendly nature. If you'd like, you can even create your own version of a chatbot, similar to ChatGPT.
-                                                                                                                            </p>
+                                                                                                                                                    <svg
+                                                                                                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                                                                                                    fill="none"
+                                                                                                                                                    viewBox="0 0 24 24"
+                                                                                                                                                    stroke-width="1.5"
+                                                                                                                                                    class="self-center shrink-0 stroke-red-500 w-6 h-6 mx-6"
+                                                                                                                                                >
+                                                                                                                                                    <path
+                                                                                                                                                        stroke-linecap="round"
+                                                                                                                                                        stroke-linejoin="round"
+                                                                                                                                                        d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+                                                                                                                                                    />
+                                                                                                                                                </svg>
                                                                                                                         </div>
-                                                                                                                    </Link>
+                                                                                                                                                    <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
+                                                                                                                                                        Feel free to ask any question to this chatbot! It will provide you with a response that is well-formatted and easy to read. This chatbot is known for its helpfulness, creativity, cleverness, and friendly nature. If you'd like, you can even create your own version of a chatbot, similar to ChatGPT.
+                                                                                                                                                    </p>
+                                                                                                                                                </div>
+                                                                                                                                            </Link>
 
-                                                                                                                    <!-- text to image -->
-                                                                                                                    <Link
-                                                                                                                        :href="route('text-to-image')"
-                                                                                                                        class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500"
-                                                                                                                        >
-                                                                                                                        <div>
-                                                                                                                            <div
-                                                                                                                                class="h-16 w-16  flex items-center justify-center rounded-full m-auto"
-                                                                                                                        >
-                                                                                                                        <img src="https://openai.test/images/generate-image.gif" />
+                                                                                                                                            <!-- text to image -->
+                                                                                                                                            <Link
+                                                                                                                                                :href="route('text-to-image')"
+                                                                                                                                                class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500"
+                                                                                                                                                >
+                                                                                                                                                <div>
+                                                                                                                                                    <div
+                                                                                                                                                        class="h-16 w-16  flex items-center justify-center rounded-full m-auto"
+                                                                                                                                                >
+                                                                                                                                                <img :src="`${host}/images/generate-image.gif`"  alt="Image" width="50" height="50"/>
                                                                                                                         </div>
 
                                                                                                                         <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Generate Image From Text</h2>
