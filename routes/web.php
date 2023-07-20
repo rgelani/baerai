@@ -54,4 +54,8 @@ Route::get('/text-to-image', function () {
 })->name('text-to-image');
 Route::post('/text-to-image', [TextToImageController::class, 'generateImage'])->name('generate.image');
 
+Route::get('privacy', function () {
+    return view('policies/privacy');
+})->name('privacy');
+
 require __DIR__ . '/auth.php';

@@ -2,8 +2,9 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2200498270451356" crossorigin="anonymous"></script>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7QQCRT4RVE"></script>
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-7QQCRT4RVE"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
 
@@ -13,14 +14,12 @@
         gtag('js', new Date());
 
         gtag('config', 'G-7QQCRT4RVE');
-    </script>
+    </script> -->
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title inertia>{{ config('app.name', 'Laravel') }}</title>
-
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2200498270451356" crossorigin="anonymous"></script>
 
     <!-- Fonts -->
     <link rel="icon" type="image/x-icon" href="{{ asset('images/favicon.ico') }}">
