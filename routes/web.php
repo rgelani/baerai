@@ -60,6 +60,9 @@ Route::get('privacy', function () {
 
 // Blogs
 
+Route::get('blogs', function () {
+    return view('blogs.index');
+});
 Route::get('blogs/ai/10-powerful-tool', function(){
     return view('blogs/ai/10-powerful-tools');
 });
