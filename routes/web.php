@@ -58,4 +58,10 @@ Route::get('privacy', function () {
     return view('policies/privacy');
 })->name('privacy');
 
+// Blogs
+
+Route::get('blogs/ai/10-powerful-tool', function(){
+    return view('blogs/ai/10-powerful-tools');
+});
+
 require __DIR__ . '/auth.php';
